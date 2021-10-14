@@ -1,0 +1,31 @@
+{
+  "name": "sms-fs-challenge",
+  "version": "1.0.0",
+  "description": "coding test challenge",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --experimental-modules index.js",
+    "seed": "node --experimental-json-modules src/database/seeders/loader",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohanyadav420/SMSTest.git"
+  },
+  "author": "Rohan Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rohanyadav420/SMSTest/issues"
+  },
+  "homepage": "https://github.com/rohanyadav420/SMSTest#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.10",
+    "requirejs": "^2.3.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
