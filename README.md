@@ -19,3 +19,6 @@ docker-compose file to run your project :)
 
 ## To Run the application
 1. npm install
+2. create a new .env in the root dir & copy keys from sample.env
+3. update the mongoURI, accordingly.
+4. run seed script i.e npm run seed

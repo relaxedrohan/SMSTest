@@ -16,4 +16,5 @@ try {
 
 setTimeout(() => {
   mongoose.connection.close();
+  console.log(`connection ended`);
 }, 60000);
