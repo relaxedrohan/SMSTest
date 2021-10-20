@@ -5,7 +5,7 @@ import routes from "./src/api/index.js";
 import morgan from "morgan";
 import bodyParser from "body-parser";
 import cors from "cors";
-import { createProxyMiddleware } from "http-proxy-middleware";
+import path from "path";
 
 const run = async () => {
   const app = Express();
@@ -27,6 +27,12 @@ const run = async () => {
   app.use(morgan(env.log_output));
   MongooseConnection(env.mongo_uri);
   app.use(routes());
+  if (env.environment === "prod") {
+    app.use(Express.static("client/build"));
+    app.get("*", (req, res) => {
+      res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    });
+  }
 };
 
 run();

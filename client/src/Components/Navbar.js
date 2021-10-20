@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <div className="navbar">
+    <div>
       <label>
         From : <input type="date" />
       </label>
