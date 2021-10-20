@@ -8,7 +8,7 @@ const jsonSchema = new Schema({
   city: String,
   start_date: String,
   end_date: String,
-  price: Schema.Types.Decimal128,
+  price: String,
   status: String,
   color: String,
 });
